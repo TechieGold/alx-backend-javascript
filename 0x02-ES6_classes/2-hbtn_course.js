@@ -2,7 +2,7 @@
 export default class HolbertonCourse {
   /**
      * @param {string} name - The name of the course.
-     * @param {number} length - The length of the course in a week.
+     * @param {number} length - The length of the course.
      * @param {Array<string>} students - The list of students enrolled in the course.
      */
   constructor(name, length, students) {
