@@ -1,4 +1,4 @@
-// This function eturns a map of groceries with the following items (name, quantity).
+// This function returns a map of groceries with the following items (name, quantity).
 
 export default function groceriesList() {
   return new Map([
