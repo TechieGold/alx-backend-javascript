@@ -1,14 +1,15 @@
 // Reads user input from the command line and display it
 
 process.stdout.write('Welcome to Holberton School, what is your name?\n');
-process.stdin.on('data', (data) => {
-  const input = data.toString().trim();
-  if (input) {
-    console.log('Your name is:', input);
+
+process.stdin.on('readable', () => {
+  const name = process.stdin.read();
+
+  if (name) {
+    process.stdout.write(`Your name is: ${name}`);
   }
 });
 
-process.on('SIGINT', () => {
-  console.log('This important software is now closing');
-  process.exit();
+process.stdin.on('close', () => {
+  process.stdout.write('This important software is now closing\n');
 });
